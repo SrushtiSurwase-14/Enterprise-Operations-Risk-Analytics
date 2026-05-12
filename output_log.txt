@@ -1,0 +1,87 @@
+Created working copy of data file
+Loaded data with engine: openpyxl Shape: (50000, 18)
+After Removing Duplicates: (50000, 18)
+
+Final Shape: (50000, 18)
+
+Missing Values:
+Record_ID        0
+Account_ID       0
+Client_ID        0
+Business_Date    0
+Region           0
+Country          0
+Department       0
+Process_Name     0
+Risk_Level       0
+SLA_Days         0
+Actual_Days      0
+Amount           0
+Exposure         0
+Loss             0
+Team_Lead        0
+Manager          0
+Delay_Days       0
+SLA_Breach       0
+dtype: int64
+
+SLA Breach Summary:
+SLA_Breach
+Yes    32169
+No     17831
+Name: count, dtype: int64
+
+[SUCCESS] Cleaning Completed Successfully!
+Cleaned file saved as: Cleaned_Enterprise_Data.xlsx
+
+==================================================
+BASIC EDA SUMMARY
+==================================================
+
+Dataset Info:
+Total Rows: 50000
+Total Columns: 18
+
+Column Types:
+Record_ID                 int64
+Account_ID                int64
+Client_ID                 int64
+Business_Date    datetime64[us]
+Region                      str
+Country                     str
+Department                  str
+Process_Name                str
+Risk_Level                  str
+SLA_Days                  int64
+Actual_Days               int64
+Amount                  float64
+Exposure                float64
+Loss                    float64
+Team_Lead                   str
+Manager                     str
+Delay_Days                int64
+SLA_Breach                  str
+dtype: object
+
+Numeric Columns Summary:
+          Record_ID     Account_ID     Client_ID  ...       Exposure          Loss   Delay_Days
+count  50000.000000   50000.000000  50000.000000  ...   50000.000000  50000.000000  50000.00000
+mean   25000.500000  550722.363700  54944.174260  ...  152316.341667  24951.761798      2.50082
+min        1.000000  100005.000000  10001.000000  ...    5011.790000      1.560000     -8.00000
+25%    12500.750000  324493.250000  32500.000000  ...   78674.710000  12531.515000     -1.00000
+50%    25000.500000  552307.500000  55039.500000  ...  152442.835000  24942.870000      2.00000
+75%    37500.250000  776491.750000  77149.000000  ...  226145.357500  37380.680000      6.00000
+max    50000.000000  999997.000000  99997.000000  ...  299994.770000  49999.350000     13.00000
+std    14433.901067  260766.036275  25931.250558  ...   85247.005743  14420.095647      4.80266
+
+[8 rows x 10 columns]
+
+First 5 rows:
+   Record_ID  Account_ID  Client_ID       Business_Date  ... Team_Lead    Manager Delay_Days SLA_Breach
+0          1      221958      28175 2022-01-01 00:00:00  ...      TL_B  Manager_1          0         No
+1          2      771155      58887 2022-01-01 01:00:00  ...      TL_B  Manager_1          0         No
+2          3      231932      61671 2022-01-01 02:00:00  ...      TL_C  Manager_1          5        Yes
+3          4      465838      10961 2022-01-01 03:00:00  ...      TL_C  Manager_3         -1         No
+4          5      359178      79285 2022-01-01 04:00:00  ...      TL_C  Manager_3          4        Yes
+
+[5 rows x 18 columns]
